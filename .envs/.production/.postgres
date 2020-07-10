@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=valfeed
+POSTGRES_USER=KyAWJAGQLQcLZBDebUUFJhNdbzoUvKbE
+POSTGRES_PASSWORD=e56Q0IGt5XkdWcV3XYg37dn7Q9oYI52cVXfVeMtU2OJvKANlI3b2kHI20uQ4WDdC
