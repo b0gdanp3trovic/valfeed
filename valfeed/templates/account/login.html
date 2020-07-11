@@ -34,6 +34,16 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 {% endif %}
 
+{#<form >#}
+{#  {% csrf_token %}#}
+{#  {{ form|crispy }}#}
+{#  {% if redirect_field_value %}#}
+{#  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />#}
+{#  {% endif %}#}
+{#  <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>#}
+{#  <button class="primaryAction btn btn-primary" type="submit">{% trans "Sign In" %}</button>#}
+{#</form>#}
+
 <form class="login" method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
   {{ form|crispy }}
@@ -41,7 +51,29 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
   <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  <button class="primaryAction btn btn-primary" type="submit">{% trans "Sign In" %}</button>
+  <button class="submit" type="submit">{% trans "Sign In" %}</button>
+{#  <h2>#}
+{#    <span class="entypo-login"><i class="fa fa-sign-in">#}
+{#    </i>#}
+{#    </span> Login#}
+{#  </h2>#}
+{#  <button class="submit">#}
+{#    <span class="entypo-lock">#}
+{#      <i class="fa fa-lock">#}
+{#      </i>#}
+{#    </span>#}
+{#  </button>#}
+{#  <span class="entypo-user inputUserIcon">#}
+{#     <i class="fa fa-user">#}
+{#     </i>#}
+{#   </span>#}
+{#  <input type="text" class="user" placeholder="ursername"/>#}
+{#  <span class="entypo-key inputPassIcon">#}
+{#     <i class="fa fa-key">#}
+{#     </i>#}
+{#   </span>#}
+{#  <input type="password" class="pass"placeholder="password"/>#}
+
 </form>
 
 {% endblock %}
